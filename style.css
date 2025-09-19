@@ -1,19 +1,13 @@
 /* From Uiverse.io by eslam-hany */
-
-html {
-    height: 100%;
-    align-content: center;
-}
 body {
-    display: flex;
-    justify-content: center;
+    justify-items: end;
 }
 
 .book {
     position: relative;
     border-radius: 10px;
-    width: 20vi;
-    height: 25vi;
+    width: 220px;
+    height: 300px;
     background-color: whitesmoke;
     -webkit-box-shadow: 1px 1px 12px #000;
     box-shadow: 1px 1px 12px #000;
@@ -31,7 +25,6 @@ body {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    justify-self: center;
     color: #000;
 }
 
@@ -87,4 +80,5 @@ img {
     height: 200px;
     opacity: 0;
 }
+
 
