@@ -12,8 +12,8 @@ body {
 .book {
     position: relative;
     border-radius: 10px;
-    width: 220px;
-    height: 300px;
+    width: 20vi;
+    height: 25vi;
     background-color: whitesmoke;
     -webkit-box-shadow: 1px 1px 12px #000;
     box-shadow: 1px 1px 12px #000;
@@ -87,3 +87,4 @@ img {
     height: 200px;
     opacity: 0;
 }
+
