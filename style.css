@@ -1,84 +1,98 @@
-/* From Uiverse.io by eslam-hany */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/Fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+}
+
 body {
-    justify-items: end;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Color de fondo claro */
+    height: 100vh;
+    font-family: 'Montserrat';
+    overflow-x: hidden;
 }
 
-.book {
-    position: relative;
-    border-radius: 10px;
-    width: 220px;
-    height: 300px;
-    background-color: whitesmoke;
-    -webkit-box-shadow: 1px 1px 12px #000;
-    box-shadow: 1px 1px 12px #000;
-    -webkit-transform: preserve-3d;
-    -ms-transform: preserve-3d;
-    transform: preserve-3d;
-    -webkit-perspective: 2000px;
-    perspective: 2000px;
-    display: -webkit-box;
-    display: -ms-flexbox;
+.main {
+    padding: 0;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+.container-header {
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    color: #000;
+    padding: 10px;
+    width: 20%;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f8f9fa; /* Color de fondo claro */
+    background-image: url(img/Fondo_lateral.jpeg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    z-index: 2;
 }
 
-.cover {
-    top: 0;
-    position: absolute;
-    background-color: lightgray;
+.logo img {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    max-width: 100%;
+    height: 10vh;
+}
+
+h1 {
+    color: #333;
+    margin: 0;
+    margin-top: 20px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.slogan {
+    color: #000000;
+    margin: 5px 0 0 0;
+    font-size: 15px;
+    text-align: center;
+}
+
+.bloque {
     width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    cursor: pointer;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-    -webkit-transform-origin: 0;
-    -ms-transform-origin: 0;
-    transform-origin: 0;
-    -webkit-box-shadow: 1px 1px 12px #000;
-    box-shadow: 1px 1px 12px #000;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    height: 20%;
+    background-color: #ffffff00;
+    margin: 0;
+}
+
+.botones {
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
+    flex-direction: column;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    width: 100%;
+    gap: 5px;
 }
 
-.book:hover .cover {
-    -webkit-transition: all 0.5s;
-    transition: all 7s;
-    -webkit-transform: rotatey(-80deg);
-    -ms-transform: rotatey(-80deg);
-    transform: rotatey(-180deg);
-    visibility: visible;
+.boton{
+    padding: 8px;
+    font-size: 14px;
+    background-color: #9a101000;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%;
+    font-family: 'Montserrat';
 }
 
-.book:hover img {
-    opacity: 1;
-    transition: opacity 0.1s ease;
-    transition-delay: 2s;
-}
-p {
-    font-size: 20px;
-    font-weight: bolder;
-    font-family: Arial, Helvetica, sans-serif;
+#Inicio {
+    font-weight: bold;
 }
 
-img {
+.Image-header img {
+    width: 100%;
+    height: 70vh; /* Ajusta este valor según tus necesidades */
+    object-fit: cover;
     position: absolute;
-    width: 200px;
-    height: 200px;
-    opacity: 0;
+    z-index: 1;
+    transform: translate(300px);
 }
-
-
