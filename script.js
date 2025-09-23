@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (entry.isIntersecting) {
                 // índice de la imagen para delay escalonado
                 const index = Array.from(images).indexOf(entry.target);
-                entry.target.style.transitionDelay = `${index * 0.2}s`; // 1s extra por cada imagen
+                entry.target.style.transitionDelay = `${index * 0.1}s`; // 1s extra por cada imagen
                 entry.target.classList.add('visible');
             } else {
                 entry.target.classList.remove('visible');
