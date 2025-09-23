@@ -187,7 +187,7 @@ h1 {
 .contenido-principal {
     height: auto;
     width: auto;
-    margin-left: 325px;
+    margin-left: 23vw;
     margin-top: 40px;
     position: relative;
     z-index: 2;
@@ -210,7 +210,7 @@ h1 {
     justify-content: center;
     display: flex;
     flex-direction: column;
-    padding-left: 6vw;
+    padding: 0 6vw;
     box-sizing: border-box;
     transition: all 1s ease-out;
     transform: translateY(20px);
@@ -229,7 +229,7 @@ h1 {
     width: 50vw;
     height: auto;
     z-index: 4;
-    padding: 5vh 6vw 5vh 0;
+    padding: 5vh 5vw 5vh 0;
 }
 
 #imagen1 {
@@ -335,8 +335,8 @@ h1 {
     opacity: 0;
 }
 .curso img{
-    width: 20vi;
-    height: 20vi;
+    width: 20vw;
+    height: 20vh;
     object-fit:contain;
     transition: transform 0.5s ease-in-out;
 }
@@ -351,19 +351,27 @@ h1 {
     cursor: pointer;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 600px) {
     .container-header {
         position: fixed;
-        width: 100vw;
-        height: 15vh;
+        width: 100%;
+        height: 11vh;
         flex-direction: row;
         align-items: center;
         z-index: 10;
         background-size: cover;
         box-shadow: -10px 4px 10px -1px, #0000001a 0px 0px 5px 0px;
     }
-    .header {
+    .logo-slogan {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         width: 20%;
+    }
+    .header {
+        width: 100%;
+        margin: 0;
     }
     h1 {
         color: #333;
@@ -375,36 +383,35 @@ h1 {
     }
 
     .logo img {
-        min-height: 10vh;
-        min-width: 5vw;
+        min-height: 5px;
+        min-width: 5px;
     }
 
     .slogan {
         font-size: 1.5vw;
-        margin: 0 10px 0 10px;
         text-align: center;
     }
 
     .bloque {
-        width: 5vi;
-        height: 10px;
+        width: 3%;
+        height: 3%;
         background-color: #00000000;
     }
 
     .botones {
         flex-direction: row;
         width: auto;
-        gap: 1vw;
+        gap: 1%;
     }
 
     .boton {
         width: auto;
-        padding: 8px 3vw;
-        font-size: 14px;
+        padding: 8px 5%;
+        font-size: 3vw;
     }
     .Image-header {
     width: 100%;
-    height: 90vh;
+    height: 70vh;
     overflow: hidden;
     position: relative;
     z-index: 1;
@@ -412,30 +419,42 @@ h1 {
 
     .Image-header img {
         width: 100%;
-        height: 100%; /* Ajusta este valor según tus necesidades */
+        height: 70vh; /* Ajusta este valor según tus necesidades */
         object-fit: fill;
         position: absolute;
         z-index: 1;
-        transform: translate(20vw, 17vh);
+        left: 32vw;
+        transform: translateX(-200px);
     }
 
     .triangulo {
         background-color: rgb(204, 240, 234);
         position: absolute;
-        width: 45vw;
-        height: 90vh;
+        width: 50vw;
+        height: 70vh;
         z-index: 2;
-        clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
         margin-left: 0;
         flex-direction: column;
         align-content: end;
         justify-content: center;
+        opacity: 0;
+        transform: translateX(600px);
+        animation: aparecer 1.5s ease forwards;
+    }
+
+    @keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translate(0px);
+    }
+
     }
 
     .content-triangulo {
         display: flex;
         position: absolute;
-        top: 59vh;
+        top: 40vh;
         left: 5vw;
         z-index: 4;
         padding: 5px 20px;
@@ -451,15 +470,53 @@ h1 {
         font-family: "Montserrat";
     }
 
+    .contenido-1 {
+        display: flex;
+        width: 100%;
+        height: 40vh;
+        background-color: #ffffff;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+
+    .block-1 h3 {
+        font-size: 1.1rem;
+        margin: 0;
+        color: #333;
+        font-weight: bold;
+        font-family: 'Montserrat';
+        margin-bottom: 10px;
+    }
+
+
+    .block-1 p {
+        font-size: 0.8rem;
+        margin: 0;
+        color: #333;
+        font-weight: bold;
+        font-family: 'Montserrat';
+    }
+
+
     .descripcion {
         position: absolute;
-        top: 72vh;
+        top: 50vh;
         left: 5vw;
         background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
         padding: 10px 20px;
         border-radius: 8px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         z-index: 4;
+    }
+    
+    .descripcion p {
+        margin: 0;
+        font-size: 4vw;
+        color: #333;
+        font-weight: bold;
+        font-family: 'Montserrat';
     }
 
     .contenido-principal {
@@ -469,4 +526,33 @@ h1 {
         position: relative;
         z-index: 2;
     }
+
+
+    .curso {
+        width: 40vi;
+        height: 20vi;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;   
+        transform: translateY(20px);
+        opacity: 0;
+        margin-top: 5vi;
+    }
+    
+    .curso img{
+        width: 40vi;
+        height: 22vi;
+        object-fit:contain;
+        transition: transform 0.5s ease-in-out;
+    }
+    .curso img:hover {
+        transform: scale(1.09) ;
+        cursor: pointer;
+    }
+
 }
