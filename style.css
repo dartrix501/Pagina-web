@@ -32,6 +32,30 @@ body {
     animation: aparecer 1.5s ease forwards;
 }
 
+
+.container-header.Nosotros {
+    background-image: None;
+    background: linear-gradient(45deg, #42cfe2, #23727e)
+}
+
+
+.header .Nosotros {
+    color: #f0f0f0;
+}
+
+.botones .Nosotros {
+    color: #ffffff;
+}
+
+.botones .Horario {
+    color: rgb(255, 255, 255);
+}
+
+.botones .Contacto {
+    color: rgb(255, 255, 255);
+}
+
+
 @keyframes aparecer {
     to {
         opacity: 1;
@@ -99,9 +123,22 @@ h1 {
     font-family: 'Montserrat';
 }
 
-#Inicio {
+.botones.Inicio #Inicio {
     font-weight: bold;
 }
+
+.botones.Nosotros #Nosotros{
+    font-weight: bold;
+}
+
+.botones.Horario #Horarios{
+    font-weight: bold;
+}
+
+.botones.Contacto #Contacto{
+    font-weight: bold;
+}
+
 
 .Image-header {
     width: 100%;
@@ -349,6 +386,186 @@ h1 {
 .curso img:hover {
     transform: scale(1.09) ;
     cursor: pointer;
+}
+
+
+.main.Nosotros {
+    width: calc(100% - 21%);
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    margin-left: 21%;
+    z-index: 4;
+    box-sizing: border-box;
+}
+
+h2.Nosotros {
+    margin: 0;
+    padding: 10vh 0 0 10vw;
+    font-size: 2rem;
+    text-align: left;
+    opacity: 0;
+    transform: translatex(-20px);
+    animation: aparecer 1.5s ease forwards;
+}
+
+.barrita.Nosotros {
+    z-index: 2;
+    width: 5%;
+    height: 3px;
+    background-color: #095a7a;
+    margin: 10px auto 0 13vw;
+    transform: translatex(-20px);
+    animation: aparecer 1.5s ease forwards;
+}
+
+.bloque-1.Nosotros {
+    width: 100%;
+    height: 50vh;
+    margin: 5vh 0;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+    object-fit: contain;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+}
+
+.bloque-1.Nosotros img {
+    width: 40%;
+    height: 80%;
+    margin-right: 5vh;
+}
+
+.b_2 {
+    width: 40%;
+    height: 80%;
+    z-index: 2;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    margin-left: 5vh;
+}
+
+.b_2 h3{
+    margin: 0 0 10% 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.b_2 p{
+    margin: 0 0 8% 0;
+    color: #666;
+}
+.b_3 {
+    margin: 0 10%;
+}
+
+.b_3 h3 {
+    font-size: 1.5rem;
+}
+
+.b_3 p {
+    margin-right: 10%;
+    color: #666;
+}
+
+
+.bloque-1.Horario{
+    margin: 5% 15%;
+}
+
+.bloque-1.Horario h2{
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.bloque-1.Horario p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.b_3.Horario {
+    margin: 0 20%;
+}
+
+.Fechas {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: #aaaaaa 1px solid;
+}
+
+.Fechas p{
+    margin-right: 0;
+    font-weight: bold;
+}
+
+.bloque-1.Contacto {
+    background-color: rgb(255, 255, 255);
+    margin: 5% 0;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 0;
+}
+
+.Datos {
+    margin: 1% 0 0 10%;
+}
+
+.bloque-1.Contacto form{
+    width: 40%;
+    height: 90%;
+    margin: 1% 0 0 20%;
+}
+
+.bloque-1.Contacto form input {
+    width: 90%;
+    height: 10%;
+    font-family: "Montserrat";
+    outline: none;
+    border: #cfcfcf 2px solid;
+}
+
+.Form {
+    margin: 2% 0;
+    font-weight: bold;
+}
+
+form textarea {
+    height: 30%;
+    width: 90%;
+    font-family: "Montserrat";
+    border: #cfcfcf 2px solid;
+    outline: none;
+}
+
+.bloque-1.Contacto form input:focus {
+    box-shadow: 0 0 3px black;
+    border: #00e1ff 1px solid;
+}
+
+form textarea:focus {
+    box-shadow: 0 0 3px black;
+    border: #00e1ff 1px solid;
+}
+
+form #submit {
+    width: 20%;
+    height: auto;
+    padding: 2.5% 0;
+    margin-top: 2.5%;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+}
+
+form #submit:focus {
+    box-shadow: 0 0 3px black;
+    border: #000000 1px solid;
 }
 
 @media (max-width: 600px) {
