@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="img/icon.png" sizes="32x32">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preload" as="image" href="/img/Fondo_central.png">
-    <link rel="preload" as="image" href="/img/logo.png">
+    <link rel="icon" type="image/png" href="../img/icon.png" sizes="32x32">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="preload" as="image" href="../img/logo.png">
     <title>Contacto</title>
 </head>
 <body>
     <header class="container-header Nosotros">  <!-- Contenedor principal del header -->
         <div class="logo-slogan">
             <div class="logo"> <!-- Contenedor del logo -->
-            <img src="img/logo.png" alt="Logo IPAESS">
+            <img src="../img/logo.png" alt="Logo IPAESS">
         </div>
         <div class="header Nosotros">
             <h1 class="Nosotros">INSTITUTO IPAESS</h1>
@@ -31,7 +30,7 @@
         </div>
     </header>
     <div class="main Nosotros">
-        <h2 class="Nosotros">CONTACTO</h1>
+        <h2 class="Nosotros">CONTACTO</h2>
         <div class="barrita Nosotros"></div>
 
         <div class="bloque-1 Contacto">
@@ -49,17 +48,31 @@
                     <p>(+51) 968 470 337</p>
                 </div>
             </div>
-            <form>
+            <form id="formulario">
                 <p>Consulta por los cursos y diplomados que tenemos para ti.</p>
                 <p class="Form" >Nombre</p>
-                <input type="Nombre" required>
+                <input type="text" name="nombre" required>
                 <p class="Form">Email</p>
-                <input type="email" id="" placeholder="example@gmail.com" required>
+                <input type="email" name="email" placeholder="example@gmail.com" required>
                 <p class="Form">Mensaje</p>
-                <textarea name="" id="" placeholder="Deje su mensaje aqui"></textarea>
+                <textarea name="mensaje" id="" placeholder="Deje su mensaje aqui"></textarea>
                 <input type="submit" value="Enviar" id="submit">
             </form>
         </div>
     </div>
+    <script>
+        document.getElementById("formulario").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+
+            const response = await fetch("/api/app", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await response.text();
+            alert(data); // muestra lo que responde Flask
+        });
+    </script>
 </body>
 </html>

@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // delay de carga de pagina
+    
     const img = document.getElementById('imagen1');
     const block1 = document.querySelector('.block-1');
     const block3 = document.querySelector('.block-3');
