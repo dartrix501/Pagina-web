@@ -55,10 +55,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     images.forEach(img => observercurso.observe(img));
 
+});
 
-    // Formulario
-
-    const form = document.getElementById("contactForm");
+const form = document.getElementById("formulario");
 
     form.addEventListener("submit", async (e) => {
         e.preventDefault();
@@ -86,4 +85,3 @@ document.addEventListener('DOMContentLoaded', () => {
             alert("Ocurrió un error al enviar los datos");
         }
     });
-});
