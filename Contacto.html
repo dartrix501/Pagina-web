@@ -54,25 +54,11 @@
                 <input type="text" name="nombre" required>
                 <p class="Form">Email</p>
                 <input type="email" name="email" placeholder="example@gmail.com" required>
-                <p class="Form">Mensaje</p>
-                <textarea name="mensaje" id="" placeholder="Deje su mensaje aqui"></textarea>
+                <p class="Form">Whatsapp</p>
+                <input type="Numero" name="numero" required>
                 <input type="submit" value="Enviar" id="submit">
             </form>
         </div>
     </div>
-    <script>
-        document.getElementById("formulario").addEventListener("submit", async (e) => {
-            e.preventDefault();
-            const formData = new FormData(e.target);
-
-            const response = await fetch("/api/app", {
-                method: "POST",
-                body: formData
-            });
-
-            const data = await response.text();
-            alert(data); // muestra lo que responde Flask
-        });
-    </script>
 </body>
 </html>
